@@ -15,7 +15,9 @@ class Home
     public function get()
     {
         $con = new Model();
-        $categorias = $con->categorias();
         $produtos   = $con->produtos_destaque();
+        include 'template/head.php';
+        include 'template/home.php';
+        include 'template/footer.php';
     }
 }

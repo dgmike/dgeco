@@ -1,4 +1,5 @@
 <?php
+define ('BASE_URL', 'http://local.dgeco.com.br/');
 
 include 'helper.php';
 include 'controller.php';
