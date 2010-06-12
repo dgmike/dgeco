@@ -51,6 +51,6 @@ class Model
 
     public function produtos_destaque()
     {
-        return $this->con->query('SELECT * FROM produto WHERE destaque = 1');
+        return $this->con->query('SELECT * FROM produto WHERE destaque = 1 ORDER BY RANDOM()');
     }
 }
