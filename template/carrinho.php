@@ -37,7 +37,10 @@
         </tr>
     </tfoot>
 </table>
+<p>
 <input type="submit" value="Atualizar Carrinho" />
+<a href="<?php echo url('comprar'); ?>" title="Efetuar a compra">Comprar</a>
+</p>
 <form>
 
 <?php endif ?>
