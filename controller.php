@@ -30,10 +30,8 @@ class Categoria
         $categoria = $con->categoria($slug);
         if ($categoria) {
         	$categoria = $categoria->fetch();
-        	print '<pre class="debug" style="text-align:left;">'.print_r($categoria, true)."</pre>";
         	$id_categoria = $categoria['id'];
             $produtos = $con->produtos($id_categoria);
-            var_dump($produtos);
         }
         include 'template/head.php';
         include 'template/home.php';
