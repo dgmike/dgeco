@@ -29,7 +29,7 @@ class Model
         $this->con->exec($sql);
 
         // Inserindo dados
-        $sql = 'INSERT INTO produto (slug, nome, descricao, preco, categoria, destaque) VALUES ("%s", "%s", "'.$loren.'"%s, %s, %s)';
+        $sql = 'INSERT INTO produto (slug, nome, descricao, preco, categoria, destaque) VALUES ("%s", "%s", "'.$loren.'", %s, %s, %s)';
         $this->con->exec(sprintf($sql, 'camisa-careca',      'Camisa Careca',         34.5,  1, 0));
         $this->con->exec(sprintf($sql, 'camisa-polo',        'Camisa Polo',           67.9,  1, 1));
         $this->con->exec(sprintf($sql, 'camisa-corinthians', 'Camisa do Corinthians', 99.34, 1, 1));

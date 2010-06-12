@@ -4,8 +4,8 @@ class Setup
 {
     public function get()
     {
-        $con = new Model();
         @unlink('banco.db');
+        $con = new Model();
         $con->setup();
     }
 }
