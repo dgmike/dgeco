@@ -61,7 +61,7 @@ class Model
 
     public function produtos($categoria_id)
     {
-        $sql = 'SELECT * FROM produto WHERE categoria = '.$categoria_id;
+        $sql = 'SELECT * FROM produto WHERE categoria = '.$categoria_id.' ORDER BY RANDOM()';
         return $this->con->query($sql);
     }
 }
