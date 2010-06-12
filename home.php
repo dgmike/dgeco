@@ -5,6 +5,7 @@ include 'controller.php';
 include 'model.php';
 
 $urls = array(
+    '^/setup/?' => 'Setup',
     '^/?$' => 'Home',
 );
 
