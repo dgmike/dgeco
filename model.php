@@ -53,4 +53,16 @@ class Model
     {
         return $this->con->query('SELECT * FROM produto WHERE destaque = 1 ORDER BY RANDOM()');
     }
+
+    public function categoria($slug)
+    {
+        return $this->con->query('SELECT * FROM categoria WHERE slug = "'.$slug.'"');
+    }
+
+    public function produtos($categoria_id)
+    {
+        $sql = 'SELECT * FROM produto WHERE categoria = '.$categoria_id;
+        print '<pre class="debug" style="text-align:left;">'.print_r($sql, true)."</pre>";
+        return $this->con->query($sql);
+    }
 }

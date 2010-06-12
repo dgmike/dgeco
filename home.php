@@ -6,8 +6,9 @@ include 'controller.php';
 include 'model.php';
 
 $urls = array(
-    '^/setup/?' => 'Setup',
-    '^/?$' => 'Home',
+    '^/setup/?'              => 'Setup',
+    '^/categoria/([a-z_-]+)' => 'Categoria',
+    '^/?$'                   => 'Home',
 );
 
 include 'app.php';
