@@ -15,7 +15,7 @@ class Model
         $loren = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
 
     	// Criando tabela categoria
-        $sql = 'CREATE TABLE categoria (id INT AUTO_INCREMENT, slug, nome)';
+        $sql = 'CREATE TABLE categoria (id INTEGER PRIMARY KEY, slug, nome)';
         $this->con->exec($sql);
 
         // Inserindo dados
@@ -25,7 +25,7 @@ class Model
         $this->con->exec(sprintf($sql, 'jaqueta', 'Jaqueta'));
 
         // Criando tabela produto
-        $sql = 'CREATE TABLE produto (id INT AUTO_INCREMENT, slug, nome, descricao, preco FLOAT, categoria INT, destaque INT)';
+        $sql = 'CREATE TABLE produto (id INTEGER PRIMARY KEY, slug, nome, descricao, preco FLOAT, categoria INT, destaque INT)';
         $this->con->exec($sql);
 
         // Inserindo dados
