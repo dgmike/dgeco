@@ -14,6 +14,8 @@ class Home
 {
     public function get()
     {
-        print 'oi';
+        $con = new Model();
+        $categorias = $con->categorias();
+        $produtos   = $con->produtos_destaque();
     }
 }

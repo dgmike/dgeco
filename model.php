@@ -43,4 +43,14 @@ class Model
         $this->con->exec(sprintf($sql, 'jaqueta-martini',    'Jaqueta Martini',       524.5, 3, 1));
         $this->con->exec(sprintf($sql, 'jaqueta-jean',       'Jaqueta Jeans',         178.2, 3, 1));
     }
+
+    public function categorias()
+    {
+        return $this->con->query('SELECT * FROM categoria');
+    }
+
+    public function produtos_destaque()
+    {
+        return $this->con->query('SELECT * FROM produto WHERE destaque = 1');
+    }
 }
