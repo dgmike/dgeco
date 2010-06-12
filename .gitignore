@@ -1,2 +1,3 @@
 *.swp
+php_errors.log
 banco.db
