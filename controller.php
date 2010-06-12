@@ -21,6 +21,7 @@ class Home
     {
         $con = new Model;
         $produtos   = $con->produtos_destaque();
+        $title = 'Produtos em destaque';
         include 'template/head.php';
         include 'template/home.php';
         include 'template/footer.php';
@@ -38,6 +39,7 @@ class Categoria
         	$id_categoria = $categoria['id'];
             $produtos = $con->produtos($id_categoria);
         }
+        $title = 'Produtos da categoria '.$categoria['nome'];
         include 'template/head.php';
         include 'template/home.php';
         include 'template/footer.php';

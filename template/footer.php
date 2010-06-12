@@ -1,4 +1,6 @@
 
+    <p>Aceitamos todos os cartões de crédito</p>
+
 </article>
 
 <footer>
