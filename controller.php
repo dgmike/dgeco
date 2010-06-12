@@ -50,3 +50,37 @@ class Produto
         include 'template/footer.php';
     }
 }
+
+class Carrinho
+{
+    public function get()
+    {
+    	session_start();
+        $con = new Model;
+        if (!isset($_SESSION['carrinho'])) {
+        	$_SESSION['carrinho'] = array();
+        }
+        include 'template/head.php';
+        include 'template/carrinho.php';
+        include 'template/footer.php';
+    }
+}
+
+class Adicionar
+{
+    public function get($slug)
+    {
+    	session_start();
+    	$con = new Model;
+        $produto = $con->produto($slug);
+        if (!isset($_SESSION['carrinho'])) {
+        	$_SESSION['carrinho'] = array();
+        }
+        if (!isset($_SESSION['carrinho'][$slug])) {
+        	$_SESSION['carrinho'][$slug] = 1;
+        } else {
+        	$_SESSION['carrinho'][$slug] += 1;
+        }
+        header('Location: '.url('carrinho'));
+    }
+}

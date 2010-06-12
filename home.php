@@ -6,10 +6,12 @@ include 'controller.php';
 include 'model.php';
 
 $urls = array(
-    '^/setup/?'              => 'Setup',
-    '/produto/([a-z_-]+)'    => 'Produto',
-    '^/categoria/([a-z_-]+)' => 'Categoria',
-    '^/?$'                   => 'Home',
+    '^/setup/?'                => 'Setup',
+    '^/carrinho/?'             => 'Carrinho',
+    '/adicionar/([a-z_-]+)/?'  => 'Adicionar',
+    '/produto/([a-z_-]+)/?'    => 'Produto',
+    '^/categoria/([a-z_-]+)/?' => 'Categoria',
+    '^/?$'                     => 'Home',
 );
 
 include 'app.php';
