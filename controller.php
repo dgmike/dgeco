@@ -96,3 +96,23 @@ class Remover
         header('Location: '.url('carrinho'));
     }
 }
+
+class Atualizar
+{
+    public function get()
+    {
+
+    }
+    public function post()
+    {
+        session_start();
+        $_SESSION['carrinho'] = array();
+        foreach ($_POST['produto'] as $slug => $qtd) {
+            $qtd = (int) $qtd;
+            if ($qtd>0) {
+            	$_SESSION['carrinho'][$slug] = $qtd;
+            }
+        }
+        header('Location: '.url('carrinho'));
+    }
+}
