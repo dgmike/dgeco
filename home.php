@@ -8,6 +8,7 @@ include 'model.php';
 $urls = array(
     '^/setup/?'                => 'Setup',
     '^/carrinho/?'             => 'Carrinho',
+    '/remover/([a-z_-]+)/?'    => 'Remover',
     '/adicionar/([a-z_-]+)/?'  => 'Adicionar',
     '/produto/([a-z_-]+)/?'    => 'Produto',
     '^/categoria/([a-z_-]+)/?' => 'Categoria',

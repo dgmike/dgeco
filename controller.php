@@ -84,3 +84,15 @@ class Adicionar
         header('Location: '.url('carrinho'));
     }
 }
+
+class Remover
+{
+    public function get($slug)
+    {
+        session_start();
+        if (isset($_SESSION['carrinho'][$slug])) {
+        	unset($_SESSION['carrinho'][$slug]);
+        }
+        header('Location: '.url('carrinho'));
+    }
+}
