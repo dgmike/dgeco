@@ -9,5 +9,5 @@ function url($uri) {
 }
 
 function valor($numero) {
-    return "R$ ".number_format($numero);
+    return "R$ ".number_format($numero, 2, ',', '');
 }

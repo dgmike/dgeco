@@ -38,3 +38,15 @@ class Categoria
         include 'template/footer.php';
     }
 }
+
+class Produto
+{
+    public function get($slug)
+    {
+        $con = new Model;
+        $produto = $con->produto($slug);
+        include 'template/head.php';
+        include 'template/produto.php';
+        include 'template/footer.php';
+    }
+}

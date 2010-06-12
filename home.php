@@ -7,6 +7,7 @@ include 'model.php';
 
 $urls = array(
     '^/setup/?'              => 'Setup',
+    '/produto/([a-z_-]+)'    => 'Produto',
     '^/categoria/([a-z_-]+)' => 'Categoria',
     '^/?$'                   => 'Home',
 );

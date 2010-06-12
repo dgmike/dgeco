@@ -64,4 +64,10 @@ class Model
         $sql = 'SELECT * FROM produto WHERE categoria = '.$categoria_id.' ORDER BY RANDOM()';
         return $this->con->query($sql);
     }
+
+    public function produto($slug)
+    {
+        $sql = 'SELECT * FROM produto WHERE slug = "'.$slug.'"';
+        return $this->con->query($sql);
+    }
 }
