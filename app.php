@@ -4,6 +4,8 @@ $url = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';
 
 $url = $_SERVER['REQUEST_URI'];
 
+# $url = $_GET['url'];
+
 foreach ($urls as $regexp => $class) {
     if (preg_match("@$regexp@", $url, $atributos)) {
         if (class_exists($class)) {

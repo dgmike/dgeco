@@ -6,6 +6,7 @@ include 'controller.php';
 include 'model.php';
 
 $urls = array(
+    '^/comprar/?'              => 'Comprar',
     '^/setup/?'                => 'Setup',
     '^/atualiza/?'             => 'Atualizar',
     '^/carrinho/?'             => 'Carrinho',

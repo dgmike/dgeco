@@ -113,3 +113,42 @@ class Atualizar
         header('Location: '.url('carrinho'));
     }
 }
+
+
+class Comprar
+{
+    public function get()
+    {
+        if (!$_SESSION['carrinho']) {
+        	header('Location: '.url('carrinho'));
+        	die;
+        }
+        $con = new Model;
+        require_once 'pagseguro/Pagseguro.php';
+        $carrinho = Pagseguro::carrinho(array(
+            'email_cobranca' => 'mike@visie.com.br',
+            'javascript' => true,
+            'button' => '',
+            'target' => '',
+            'encoding' => 'UTF-8',
+        ));
+        $carrinho->cliente(array(
+            'nome' => 'Marcel Verebes',
+            'cep' => '03443000',
+        ));
+        foreach ($_SESSION['carrinho'] as $slug => $qtd) {
+            $produto = $con->produto($slug)->fetch();
+            $produto = array(
+                'id' => $produto['id'],
+                'desc' => $produto['nome'],
+                'quant' => $qtd,
+                'valor' => $produto['preco'],
+            );
+            $carrinho->produto($produto);
+        }
+        $_SESSION['carrinho'] = array();
+        print '<html><head><title></title></head><body>';
+        $carrinho->mostra();
+        print '</body></html>';
+    }
+}
