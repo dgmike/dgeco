@@ -3,7 +3,7 @@
 
 class Pagseguro
 {
-    public function getModule($module, $args=null)
+    static public function getModule($module, $args=null)
     {
         $module = ucfirst(strtolower($module));
         require_once dirname(__FILE__).DIRECTORY_SEPARATOR.$module.'.php';
