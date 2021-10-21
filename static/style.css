@@ -71,6 +71,20 @@ article dl {
 	text-align:center;
 	padding: 10px;
 }
+article dl img {
+  width: auto;
+}
+article dl dd a {
+  display: block;
+  background: #fc4;
+  color: #222;
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+}
+article dl dd a:hover {
+  box-shadow: 0 0 5px 1px #999;
+}
 article dl:hover {
 	background:#CCC;
 }

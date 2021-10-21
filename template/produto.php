@@ -3,7 +3,7 @@
 
 <h1><?php echo $p->nome; ?></h1>
 
-<img src="<?php echo url('image'.$p->slug); ?>" width="300" height="300" class="big" />
+<img src="<?php echo url('image/' . $p->slug . '.jpg'); ?>" width="300" height="300" class="big" />
 
 <p><?php echo $p->descricao; ?></p>
 
