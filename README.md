@@ -1,4 +1,4 @@
-# DG Eco
+# DGEco
 
 A simple store writen in PHP 7+.
 
