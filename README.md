@@ -2,7 +2,7 @@
 
 A simple store writen in PHP 7+.
 
-You just need PHP to run this project:
+You just need PHP to with `PDO` and `sqlite3` run this project:
 
 ```sh
 BASE_URL=http://localhost:8080
@@ -13,6 +13,7 @@ You can use `docker` to run the store:
 
 ```sh
 docker run \
+  --rm \
   -ti \
   -v $PWD:/app \
   -w /app \
