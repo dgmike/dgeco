@@ -1,5 +1,6 @@
 <?php
-define ('BASE_URL', 'http://local.dgeco.com.br/');
+$baseUrl = getEnv('BASE_URL') ? getEnv('BASE_URL') : 'http://local.dgeco.com.br';
+define ('BASE_URL', $baseUrl . '/');
 
 include 'helper.php';
 include 'controller.php';
