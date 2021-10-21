@@ -1,6 +1,6 @@
 # DGEco
 
-A simple store writen in PHP 7+.
+A simple store writen in PHP 7+. It uses PagSeguro as payment gateway.
 
 ![dgeco](screenshot.png)
 
