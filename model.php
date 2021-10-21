@@ -32,16 +32,19 @@ class Model
         $sql = 'INSERT INTO produto (slug, nome, descricao, preco, categoria, destaque) VALUES ("%s", "%s", "'.$loren.'", %s, %s, %s)';
         $this->con->exec(sprintf($sql, 'camisa-careca',      'Camisa Careca',         34.5,  1, 0));
         $this->con->exec(sprintf($sql, 'camisa-polo',        'Camisa Polo',           67.9,  1, 1));
-        $this->con->exec(sprintf($sql, 'camisa-corinthians', 'Camisa do Corinthians', 99.34, 1, 1));
+        $this->con->exec(sprintf($sql, 'camisa-corinthians', 'Camisa do Corinthians', 99.34, 1, 0));
         $this->con->exec(sprintf($sql, 'camisa-social',      'Camisa social',         34.5,  1, 1));
 
         $this->con->exec(sprintf($sql, 'calca-jeans',        'Calça Jeans',           85.34, 2, 1));
-        $this->con->exec(sprintf($sql, 'calca-social',       'Calça Social',          124.5, 2, 1));
-        $this->con->exec(sprintf($sql, 'calca-grande',       'Calça Grande',          124.5, 2, 0));
+        $this->con->exec(sprintf($sql, 'calca-social',       'Calça Social',          124.5, 2, 0));
+        $this->con->exec(sprintf($sql, 'calca-grande',       'Calça Grande',          124.5, 2, 1));
+        $this->con->exec(sprintf($sql, 'calca-cargo',        'Calça Cargo',           129.5, 2, 0));
+        $this->con->exec(sprintf($sql, 'calca-baixa',        'Calça Cintura Baixa',   151.5, 2, 1));
 
-        $this->con->exec(sprintf($sql, 'jaqueta-couro',      'Jaqueta de couro',      224.5, 3, 0));
-        $this->con->exec(sprintf($sql, 'jaqueta-martini',    'Jaqueta Martini',       524.5, 3, 1));
-        $this->con->exec(sprintf($sql, 'jaqueta-jean',       'Jaqueta Jeans',         178.2, 3, 1));
+        $this->con->exec(sprintf($sql, 'jaqueta-couro',      'Jaqueta de couro',      224.5, 3, 1));
+        $this->con->exec(sprintf($sql, 'jaqueta-martini',    'Jaqueta Martini',       524.5, 3, 0));
+        $this->con->exec(sprintf($sql, 'jaqueta-jeans',      'Jaqueta Jeans',         178.2, 3, 1));
+        $this->con->exec(sprintf($sql, 'jaqueta-infantil',   'Jaqueta Infantil',      258.1, 3, 1));
     }
 
     public function categorias()
