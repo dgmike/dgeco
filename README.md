@@ -5,7 +5,8 @@ A simple store writen in PHP 7+.
 You just need PHP to run this project:
 
 ```sh
-php -S 0.0.0.0:8080 -t /app/static home.php
+BASE_URL=http://localhost:8080
+php -S localhost:8080 home.php
 ```
 
 You can use `docker` to run the store:
@@ -18,7 +19,7 @@ docker run \
   -e BASE_URL=http://localhost:8080 \
   -p 8080:8080 \
   php \
-    php -S 0.0.0.0:8080 -t /app/static home.php
+    php -S 0.0.0.0:8080 home.php
 ```
 
 Then, you need to make the setup to create the batabase (sqlite) file:
