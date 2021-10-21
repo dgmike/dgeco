@@ -17,4 +17,4 @@ foreach ($urls as $regexp => $class) {
         }
     }
 }
-error();
+error404();
