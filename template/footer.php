@@ -5,6 +5,8 @@
 
 <footer>
     Desenvolvido por dgmike
+    ·
+    <a href="<?php echo url('') ?>">dgeco</a>
 </footer>
 
 </body>
