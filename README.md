@@ -2,6 +2,8 @@
 
 A simple store writen in PHP 7+.
 
+![dgeco](screenshot.png)
+
 You just need PHP to with `PDO` and `sqlite3` run this project:
 
 ```sh
