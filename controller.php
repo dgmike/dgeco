@@ -12,6 +12,7 @@ class Setup
         @unlink('banco.db');
         $con = new Model();
         $con->setup();
+        header('Location: /');
     }
 }
 
